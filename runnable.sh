@@ -8,7 +8,7 @@ if [ -e trabalho2.py ];then
 			echo "${entrada[i]}:"
 			cat ${entrada}
 			echo ""
-			python trabalho2.py < ${entrada[i]}
+			./trabalho2.py < ${entrada[i]}
 		fi
 	done
 fi
