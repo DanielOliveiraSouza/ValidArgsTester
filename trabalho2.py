@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import os
@@ -269,9 +270,9 @@ def resolve(proposicoes,resp):
         if ( (k  / ( len (proposicoes) + 1 ) == 1000 ) ):
             print("Numero de iteracoes >> que len(proposicoes)\nA expressao não pode ser resolvida com as tecnicas de inferencias programadas :(")
             exit(1)
-    #resp=raw_input("Digite a proposição esperada de saída, após  a resolução por prova direta")
+    #resp=input("Digite a proposição esperada de saída, após  a resolução por prova direta")
     if (resp == proposicoes[0] ):
-        print "\n\ncqd:",  proposicoes 
+        print ("\n\ncqd:",  proposicoes )
     else:
         print ("Argumento falho")
     
@@ -295,7 +296,7 @@ def main():
     while aux != "":
         try:
         
-            aux = raw_input("proposicao: \n")
+            aux = input("proposicao: \n")
             
             
             if (aux != ''):
