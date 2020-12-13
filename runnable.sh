@@ -1,6 +1,7 @@
 #!/bin/bash
 entrada=("input" "input2" "input3")
-if [ -e trabalho2.py ];then
+validArgs='validArgs.py'
+if [ -e "$validArgs" ];then
 	for ((i=0; i < ${#entrada[*]}; i++)) do
 		if [ -e ${entrada[i]} ];then
 			echo "_______________________________________________________________________"
@@ -8,7 +9,7 @@ if [ -e trabalho2.py ];then
 			echo "${entrada[i]}:"
 			cat ${entrada}
 			echo ""
-			./trabalho2.py < ${entrada[i]}
+			./"$validArgs" < ${entrada[i]}
 		fi
 	done
 fi
